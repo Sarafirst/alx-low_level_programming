@@ -1,36 +1,36 @@
 #include <stdio.h>
-
 /**
- * main - Entry point
+ * main - prints single digit numbers
  *
- * Return: always 0
+ * Description: prints single digit numbers with commas
+ * Return: always returns 0
  */
 int main(void)
 {
-	int ones = '0';
-	int tens = '0';
-	int hundres = '0';
+	int a;
+	int b;
+	int c;
 
-	for (hundres = '0'; hundres <= '9'; hundres++)
+	for (a = 0; a <= 9; a++)
 	{
-		for (tens = '0', tens <= '9'; tens++)
+		for (b = 0; b <= 9; b++)
 		{
-			for (ones = '0', ones <= '9'; ones++)
+			for (c = 0; c <= 9; c++)
 			{
-				if (!((ones == tens) || (tens == hundres) || (tens > ones) || (hundres > tens)))
+				if (c > b && b > a)
 				{
-					putchar(hundres);
-					putchar(tens);
-					putchar(ones);
-					if (!(ones == '9' && hundres == '7' && tens == '8'))
+					putchar(a + '0');
+					putchar(b + '0');
+					putchar(c + '0');
+					if (a != 7 || b != 8 || c != 9)
 					{
-						putchar (',');
-						putchar (' );
+						putchar(',');
+						putchar(' ');
 					}
 				}
 			}
 		}
 	}
-	putcha('\n');
+	putchar('\n');
 	return (0);
 }

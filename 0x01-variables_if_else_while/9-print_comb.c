@@ -1,18 +1,17 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - print single digit numbers
  *
- * Return: always 0
+ * Return: always 0 (success)
  */
-
 int main(void)
-	{
-	int a;
+{
+	int i;
 
-	for (a = 0; a < 10; a++)
+	for (i = 10; i < 20; i++)
 	{
-		putchar(a + '0');
-		if (a < 9)
+		putchar((i % 10) + '0');
+		if (i != 19)
 		{
 			putchar(',');
 			putchar(' ');
@@ -20,4 +19,4 @@ int main(void)
 	}
 	putchar('\n');
 	return (0);
-	}
+}
